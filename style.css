@@ -1,0 +1,31 @@
+/* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+    /* Navegação */
+    nav { background: #333; color: #fff; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; }
+    .container { max-width: 1200px; margin: auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .menu { list-style: none; display: flex; }
+    .menu li { margin-left: 1rem; }
+    .menu li:first-child { margin-left: 0; }
+    .menu a { color: #fff; text-decoration: none; padding: 0.5rem; transition: background 0.3s; }
+    .menu a:hover { background: #575757; border-radius: 4px; }
+
+    /* Menu hamburger */
+    .hamburger { display: none; flex-direction: column; cursor: pointer; }
+    .hamburger span { height: 3px; width: 25px; background: #fff; margin-bottom: 4px; border-radius: 5px; }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .menu { position: absolute; top: 60px; left: 0; right: 0; background: #333; flex-direction: column; display: none; }
+      .menu.open { display: flex; }
+      .menu li { margin: 1rem 0; text-align: center; }
+      .hamburger { display: flex; }
+    }
+
+    /* Seções */
+    section { padding: 100px 1rem; min-height: 100vh; }
+    #home { background: #f4f4f4; }
+    #about { background: #e4e4e4; }
+    #services { background: #d4d4d4; }
+    #contact { background: #c4c4c4; }
